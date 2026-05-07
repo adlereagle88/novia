@@ -2,20 +2,20 @@
   <div class="shell">
     <aside class="sidebar">
       <h1>Novia.ai</h1>
+      <p class="muted">Control Plane</p>
       <nav>
         <RouterLink v-for="item in items" :key="item.to" :to="item.to">{{ item.label }}</RouterLink>
       </nav>
     </aside>
     <main>
       <header class="header">
-        <div><strong>Abteilung:</strong> {{ department }}</div>
+        <div class="dept-pill">Aktive Abteilung: {{ department }}</div>
         <div>{{ user.name }} · {{ user.role }}</div>
       </header>
       <section class="content"><slot /></section>
     </main>
   </div>
 </template>
-
 <script setup lang="ts">
 import { computed } from 'vue'
 import { currentUser, departments } from '../data/model'

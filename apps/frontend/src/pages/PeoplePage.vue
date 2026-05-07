@@ -1,2 +1,6 @@
-<template><AdminShell><h2>Personen</h2><table><tr><th>Name</th><th>Rolle</th><th>Scope</th><th>Abteilung</th><th>Status</th></tr><tr v-for="p in people" :key="p.name"><td>{{p.name}}</td><td>{{p.role}}</td><td>{{p.scope}}</td><td>{{p.department}}</td><td>{{p.status}}</td></tr></table></AdminShell></template>
-<script setup lang="ts">import AdminShell from '../layouts/AdminShell.vue'; import { people } from '../data/model'</script>
+<template><AdminShell><PageHeader title="Personen" subtitle="Rollen, Scope und Abteilungszuordnung" /><DataTable :headers="['Name','Rolle','Scope','Abteilung','Status']"><tr v-for="p in visible" :key="p.id"><td>{{p.name}}</td><td>{{p.role}}</td><td>{{p.scope}}</td><td>{{p.departmentCode}}</td><td>{{p.status}}</td></tr></DataTable></AdminShell></template>
+<script setup lang="ts">
+import AdminShell from '../layouts/AdminShell.vue'; import PageHeader from '../components/PageHeader.vue'; import DataTable from '../components/DataTable.vue'
+import { canSeeDepartment, currentUser, people } from '../data/model'
+const visible = people.filter((p) => canSeeDepartment(currentUser.role, currentUser.departmentCode, p.departmentCode))
+</script>
