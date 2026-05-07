@@ -1,0 +1,2 @@
+<template><AdminShell><h2>Einstellungen</h2><div class="grid"><article class="card"><strong>Rollen & Berechtigungen</strong><p>VIP/Super Admin sieht alle Bereiche; Operator nur scoped Ressourcen.</p></article><article class="card"><strong>AI-Flags</strong><p>AI-only Bereiche optional und per Flag deaktivierbar.</p></article><article class="card"><strong>Audit & Retention</strong><p>Jede risikobehaftete Aktion benötigt explizite Freigabe.</p></article></div></AdminShell></template>
+<script setup lang="ts">import AdminShell from '../layouts/AdminShell.vue'</script>
