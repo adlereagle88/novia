@@ -1,0 +1,2 @@
+<template><AdminShell><h2>Monitoring</h2><table><tr><th>Zeit</th><th>Typ</th><th>Quelle</th><th>Nachricht</th></tr><tr><td>14:10</td><td>warning</td><td>postgres-primary</td><td>Connection pool near limit</td></tr><tr><td>14:13</td><td>info</td><td>agt-audit-watch</td><td>Approval queue scanned</td></tr></table></AdminShell></template>
+<script setup lang="ts">import AdminShell from '../layouts/AdminShell.vue'</script>

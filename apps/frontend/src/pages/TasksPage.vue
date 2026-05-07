@@ -1,0 +1,2 @@
+<template><AdminShell><h2>Aufgaben</h2><table><tr><th>ID</th><th>Titel</th><th>Status</th><th>Priorität</th><th>Zuweisung</th><th>Historie</th></tr><tr v-for="t in tasks" :key="t.id"><td>{{t.id}}</td><td>{{t.title}}</td><td>{{t.status}}</td><td>{{t.priority}}</td><td>{{t.assignee}}</td><td>{{t.history}}</td></tr></table></AdminShell></template>
+<script setup lang="ts">import AdminShell from '../layouts/AdminShell.vue'; import { tasks } from '../data/model'</script>

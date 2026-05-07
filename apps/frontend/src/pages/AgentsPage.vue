@@ -1,0 +1,2 @@
+<template><AdminShell><h2>Agenten</h2><table><tr><th>ID</th><th>Zweck</th><th>Scope</th><th>Status</th><th>Rechte</th><th>Zeitplan</th></tr><tr v-for="a in agents" :key="a.id"><td>{{a.id}}</td><td>{{a.purpose}}</td><td>{{a.scope}}</td><td>{{a.status}}</td><td>{{a.rights}}</td><td>{{a.schedule}}</td></tr></table></AdminShell></template>
+<script setup lang="ts">import AdminShell from '../layouts/AdminShell.vue'; import { agents } from '../data/model'</script>

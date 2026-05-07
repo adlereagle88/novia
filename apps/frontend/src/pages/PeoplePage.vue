@@ -1,0 +1,2 @@
+<template><AdminShell><h2>Personen</h2><table><tr><th>Name</th><th>Rolle</th><th>Scope</th><th>Abteilung</th><th>Status</th></tr><tr v-for="p in people" :key="p.name"><td>{{p.name}}</td><td>{{p.role}}</td><td>{{p.scope}}</td><td>{{p.department}}</td><td>{{p.status}}</td></tr></table></AdminShell></template>
+<script setup lang="ts">import AdminShell from '../layouts/AdminShell.vue'; import { people } from '../data/model'</script>

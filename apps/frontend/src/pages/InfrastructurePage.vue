@@ -1,0 +1,2 @@
+<template><AdminShell><h2>Infrastruktur</h2><div class="grid"><article class="card"><strong>host-core-01</strong><div>10.0.1.11</div><small>Status: 🟢 erreichbar</small></article><article class="card"><strong>postgres-primary</strong><div>10.0.1.31:5432</div><small>Status: 🟡 Latenz erhöht</small></article><article class="card"><strong>agent-gateway</strong><div>10.0.1.52:8443</div><small>Status: 🔴 Paketverlust</small></article></div></AdminShell></template>
+<script setup lang="ts">import AdminShell from '../layouts/AdminShell.vue'</script>
